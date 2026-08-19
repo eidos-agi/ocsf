@@ -1,0 +1,226 @@
+{
+  "format": "ocsf",
+  "version": "0.1.0",
+  "group": "ocsf:ford-illustrative:group",
+  "entities": [
+    {
+      "id": "ocsf:ford-illustrative:entity:fmc",
+      "type": "legal_entity",
+      "title": "Ford Motor Company",
+      "status": "active",
+      "properties": {
+        "jurisdiction": "US-DE",
+        "entity_type": "holding_company",
+        "legal_name": "Ford Motor Company",
+        "notes": "Public parent. Dual-class structure (Common + Class B). Class B shares (primarily Ford family) carry enhanced voting power (~40% voting for ~2% equity)."
+      },
+      "provenance": {
+        "by": "human:example",
+        "method": "public 10-K / proxy disclosures"
+      }
+    },
+    {
+      "id": "ocsf:ford-illustrative:entity:fmcc",
+      "type": "legal_entity",
+      "title": "Ford Motor Credit Company LLC",
+      "status": "active",
+      "properties": {
+        "jurisdiction": "US-DE",
+        "entity_type": "operating_company",
+        "legal_name": "Ford Motor Credit Company LLC",
+        "notes": "Wholly-owned finance subsidiary providing vehicle financing, leasing, and dealer financing."
+      },
+      "provenance": {
+        "by": "human:example",
+        "method": "public Exhibit 21 and 10-K"
+      }
+    },
+    {
+      "id": "ocsf:ford-illustrative:entity:ford-canada",
+      "type": "legal_entity",
+      "title": "Ford Motor Company of Canada, Limited",
+      "status": "active",
+      "properties": {
+        "jurisdiction": "CA",
+        "entity_type": "operating_company",
+        "legal_name": "Ford Motor Company of Canada, Limited"
+      },
+      "provenance": {
+        "by": "human:example",
+        "method": "public Exhibit 21"
+      }
+    },
+    {
+      "id": "ocsf:ford-illustrative:entity:ford-werke",
+      "type": "legal_entity",
+      "title": "Ford-Werke GmbH",
+      "status": "active",
+      "properties": {
+        "jurisdiction": "DE",
+        "entity_type": "operating_company",
+        "legal_name": "Ford-Werke GmbH",
+        "notes": "German manufacturing / European operations entity."
+      },
+      "provenance": {
+        "by": "human:example",
+        "method": "public Exhibit 21"
+      }
+    },
+    {
+      "id": "ocsf:ford-illustrative:entity:ford-uk",
+      "type": "legal_entity",
+      "title": "Ford Motor Company Limited",
+      "status": "active",
+      "properties": {
+        "jurisdiction": "GB",
+        "entity_type": "operating_company",
+        "legal_name": "Ford Motor Company Limited"
+      },
+      "provenance": {
+        "by": "human:example",
+        "method": "public Exhibit 21"
+      }
+    },
+    {
+      "id": "ocsf:ford-illustrative:entity:fgt",
+      "type": "legal_entity",
+      "title": "Ford Global Technologies, LLC",
+      "status": "active",
+      "properties": {
+        "jurisdiction": "US-DE",
+        "entity_type": "asset_co",
+        "legal_name": "Ford Global Technologies, LLC",
+        "notes": "IP / technology holding entity."
+      },
+      "provenance": {
+        "by": "human:example",
+        "method": "public Exhibit 21"
+      }
+    },
+    {
+      "id": "ocsf:ford-illustrative:entity:blueoval-battery-mi",
+      "type": "legal_entity",
+      "title": "BlueOval Battery Michigan, LLC",
+      "status": "active",
+      "properties": {
+        "jurisdiction": "US-DE",
+        "entity_type": "spv",
+        "legal_name": "BlueOval Battery Michigan, LLC",
+        "notes": "Battery-related entity (BlueOval ecosystem)."
+      },
+      "provenance": {
+        "by": "human:example",
+        "method": "public Exhibit 21"
+      }
+    },
+    {
+      "id": "ocsf:ford-illustrative:brand:ford",
+      "type": "brand",
+      "title": "Ford",
+      "status": "active",
+      "properties": {
+        "notes": "Primary mass-market brand."
+      }
+    },
+    {
+      "id": "ocsf:ford-illustrative:brand:lincoln",
+      "type": "brand",
+      "title": "Lincoln",
+      "status": "active",
+      "properties": {
+        "notes": "Luxury brand owned by Ford Motor Company."
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "id": "ocsf:ford-illustrative:rel:fmc-owns-fmcc",
+      "type": "owns",
+      "from": "ocsf:ford-illustrative:entity:fmc",
+      "to": "ocsf:ford-illustrative:entity:fmcc",
+      "properties": {
+        "ownership_percent": 100,
+        "voting_rights_percent": 100,
+        "notes": "Wholly-owned subsidiary per public disclosures."
+      }
+    },
+    {
+      "id": "ocsf:ford-illustrative:rel:fmc-owns-canada",
+      "type": "owns",
+      "from": "ocsf:ford-illustrative:entity:fmc",
+      "to": "ocsf:ford-illustrative:entity:ford-canada",
+      "properties": {
+        "ownership_percent": 100,
+        "voting_rights_percent": 100
+      }
+    },
+    {
+      "id": "ocsf:ford-illustrative:rel:fmc-owns-werke",
+      "type": "owns",
+      "from": "ocsf:ford-illustrative:entity:fmc",
+      "to": "ocsf:ford-illustrative:entity:ford-werke",
+      "properties": {
+        "ownership_percent": 100,
+        "voting_rights_percent": 100
+      }
+    },
+    {
+      "id": "ocsf:ford-illustrative:rel:fmc-owns-uk",
+      "type": "owns",
+      "from": "ocsf:ford-illustrative:entity:fmc",
+      "to": "ocsf:ford-illustrative:entity:ford-uk",
+      "properties": {
+        "ownership_percent": 100,
+        "voting_rights_percent": 100
+      }
+    },
+    {
+      "id": "ocsf:ford-illustrative:rel:fmc-owns-fgt",
+      "type": "owns",
+      "from": "ocsf:ford-illustrative:entity:fmc",
+      "to": "ocsf:ford-illustrative:entity:fgt",
+      "properties": {
+        "ownership_percent": 100,
+        "voting_rights_percent": 100
+      }
+    },
+    {
+      "id": "ocsf:ford-illustrative:rel:fmc-owns-blueoval-mi",
+      "type": "owns",
+      "from": "ocsf:ford-illustrative:entity:fmc",
+      "to": "ocsf:ford-illustrative:entity:blueoval-battery-mi",
+      "properties": {
+        "ownership_percent": 100,
+        "voting_rights_percent": 100
+      }
+    },
+    {
+      "id": "ocsf:ford-illustrative:rel:fmc-owns-brand-ford",
+      "type": "owns",
+      "from": "ocsf:ford-illustrative:entity:fmc",
+      "to": "ocsf:ford-illustrative:brand:ford",
+      "properties": {
+        "notes": "Primary brand."
+      }
+    },
+    {
+      "id": "ocsf:ford-illustrative:rel:fmc-owns-brand-lincoln",
+      "type": "owns",
+      "from": "ocsf:ford-illustrative:entity:fmc",
+      "to": "ocsf:ford-illustrative:brand:lincoln",
+      "properties": {
+        "notes": "Luxury brand."
+      }
+    }
+  ],
+  "events": [
+    {
+      "id": "ocsf:ford-illustrative:event:incorporation-1919",
+      "type": "incorporation",
+      "entity": "ocsf:ford-illustrative:entity:fmc",
+      "date": "1919",
+      "notes": "Ford Motor Company reincorporated in Delaware in 1919 (original Michigan company 1903)."
+    }
+  ],
+  "notes": "This is a heavily simplified demonstration graph. Real Ford structure contains hundreds of subsidiaries, many SPVs/trusts for securitization, joint ventures (Ford Otosan ~41%, Changan Ford, etc.), and complex dual-class voting. See public Exhibit 21 of the latest 10-K for the official subsidiary list."
+}
